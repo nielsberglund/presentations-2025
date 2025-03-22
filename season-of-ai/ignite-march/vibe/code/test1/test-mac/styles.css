@@ -1,0 +1,197 @@
+:root {
+    --primary-color: #ff00cc;
+    --secondary-color: #00ffea;
+    --text-color: #6a1b9a;
+    --bg-color: #f0e6ff;
+    --container-bg: #ffffff;
+    --shadow-color: rgba(255, 0, 204, 0.15);
+    --footer-bg: #e8d5ff;
+    --transition-speed: 0.3s;
+}
+
+/* Dark Mode Variables */
+.dark-mode {
+    --primary-color: #00ffea;
+    --secondary-color: #ff00cc;
+    --text-color: #00ffea;
+    --bg-color: #2d0a42;
+    --container-bg: #3d1258;
+    --shadow-color: rgba(0, 255, 234, 0.2);
+    --footer-bg: #220832;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+header {
+    background-color: var(--container-bg);
+    box-shadow: 0 2px 5px var(--shadow-color);
+    padding: 1.5rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color var(--transition-speed);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Dark Mode Toggle Styling */
+.dark-mode-toggle {
+    position: relative;
+}
+
+#darkmode-toggle {
+    opacity: 0;
+    position: absolute;
+}
+
+.dark-mode-toggle label {
+    cursor: pointer;
+    padding: 0.5rem;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60px;
+    height: 30px;
+}
+
+.dark-mode-toggle i {
+    color: white;
+    transition: transform 0.2s ease;
+}
+
+.fa-moon {
+    margin-left: 5px;
+}
+
+.fa-sun {
+    margin-right: 5px;
+}
+
+.dark-mode-toggle input:checked + label .fa-sun {
+    transform: translateY(30px);
+    opacity: 0;
+}
+
+.dark-mode-toggle input:not(:checked) + label .fa-moon {
+    transform: translateY(-30px);
+    opacity: 0;
+}
+
+/* Hero Section */
+main {
+    padding-top: 100px;
+}
+
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 0;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    transition: color var(--transition-speed);
+}
+
+.description {
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(78, 84, 200, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(78, 84, 200, 0.4);
+}
+
+.cta-button:active {
+    transform: translateY(-1px);
+}
+
+footer {
+    background-color: var(--footer-bg);
+    padding: 2rem 0;
+    text-align: center;
+    transition: background-color var(--transition-speed);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    .description {
+        font-size: 1.1rem;
+    }
+    
+    .cta-button {
+        padding: 0.8rem 1.6rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .description {
+        font-size: 1rem;
+    }
+    
+    .hero {
+        min-height: 60vh;
+        padding: 2rem 0;
+    }
+}
