@@ -14,6 +14,18 @@ Switch the color scheme to something funky
 
 --------------
 
+Create a responsive landing page for our next Data & AI conference with a call-to-action and dark mode toggle.
+
+Add a title
+
+Add buttons to link to registrations and call for speakers
+
+When clicking the buttons make them jiggle
+
+Switch the color scheme to something funky
+
+----------------
+
 Create a simple streamlit web page that displays the current weather for a city the user enters. to retrieve the weather you should use python.
 
 ---------
