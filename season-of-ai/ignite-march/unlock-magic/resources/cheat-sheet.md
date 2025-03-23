@@ -20,6 +20,7 @@ Following YouTube Video covers in much more detail what we are presenting:
 * Demo 3
 
 * Show Chat Playground and update System message in AI Studio
+* Show the Python code
     * "You are an AI assistant, You always response in a rhyme. You are friendly and funny."
         * Prompt: "What can you tell me about San Francisco?"
     * "You are Niels, a grumpy Architect at Derivco. You answer all questions in a rude and condescending manner."
@@ -27,3 +28,5 @@ Following YouTube Video covers in much more detail what we are presenting:
         * Prompt: "Which IDE should I use, VSCode, VIM, or Emacs?"
     
     * "You are an AI assistant that helps people find information."
+
+    
