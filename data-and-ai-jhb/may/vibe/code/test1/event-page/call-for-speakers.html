@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call for Speakers - Data and AI Event: Season of AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="light-mode">
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Data and AI Event</h1>
+                <h2>Season of AI</h2>
+            </div>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn">
+                    <i class="fas fa-moon"></i>
+                    <span>Dark Mode</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Call for Speakers</h1>
+            </div>
+        </section>
+
+        <section class="call-for-speakers">
+            <div class="container">
+                <h2>Share Your Expertise</h2>
+                <p>We invite experts in the fields of data science, machine learning, artificial intelligence, and related areas to submit proposals for sessions at the upcoming Data and AI Event: Season of AI.</p>
+                
+                <div class="submission-details">
+                    <h3>Submission Guidelines</h3>
+                    <p>We're looking for talks on the following topics:</p>
+                    <ul>
+                        <li>Machine Learning & Deep Learning</li>
+                        <li>Generative AI</li>
+                        <li>Data Engineering & Analysis</li>
+                        <li>AI Ethics & Responsible AI</li>
+                        <li>AI in Production</li>
+                        <li>Emerging AI Technologies</li>
+                    </ul>
+                </div>
+                
+                <div class="form-container">
+                    <h3>Speaker Application</h3>
+                    <form id="speaker-form">
+                        <div class="form-group">
+                            <input type="text" id="speaker-name" name="speaker-name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="speaker-email" name="speaker-email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="talk-title" name="talk-title" placeholder="Talk Title" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="talk-abstract" name="talk-abstract" placeholder="Talk Abstract (max 500 words)" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">Submit Proposal</button>
+                    </form>
+                </div>
+                
+                <div class="button-group">
+                    <a href="index.html" class="cta-button secondary-button">Return to Home</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Data and AI Event: Season of AI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

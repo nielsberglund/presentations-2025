@@ -1,0 +1,123 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+header {
+    background: #007bff;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav h1 {
+    margin: 0;
+}
+
+#darkModeToggle {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#darkModeToggle:hover {
+    background: #555;
+}
+
+.dark-mode #darkModeToggle {
+    background: #f0f0f0;
+    color: #333;
+}
+
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+#hero {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+#hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background: #0056b3;
+}
+
+.dark-mode .cta-button {
+    background: #0056b3;
+}
+
+.dark-mode .cta-button:hover {
+    background: #003d80;
+}
+
+
+#register {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #f4f4f4;
+    margin-top: 20px;
+}
+
+.dark-mode footer {
+    background: #222;
+    color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav h1 {
+        margin-bottom: 10px;
+    }
+
+    #hero h2 {
+        font-size: 2rem;
+    }
+}
