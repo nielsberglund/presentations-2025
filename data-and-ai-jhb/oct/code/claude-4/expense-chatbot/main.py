@@ -83,7 +83,7 @@ async def chat(request: Request, message: str = Form(...)):
         # Run the agent and wait for completion
         run = project_client.agents.runs.create_and_process(
             thread_id=thread.id,
-            assistant_id=AGENT_ID
+            agent_id=AGENT_ID
         )
 
         # Check if run completed successfully
@@ -92,7 +92,7 @@ async def chat(request: Request, message: str = Form(...)):
             messages = project_client.agents.messages.list(thread_id=thread.id)
 
             # Extract the assistant's response (most recent message)
-            for msg in messages.data:
+            for msg in messages:
                 if msg.role == "assistant":
                     # Get the text content from the message
                     if msg.content:
