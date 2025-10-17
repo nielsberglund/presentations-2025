@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Report Assistant</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Expense Report Assistant</h1>
+            <p class="subtitle">Ask about expense policies or submit expense reports</p>
+            <div id="connection-status" class="status-indicator">
+                <span class="status-dot"></span>
+                <span class="status-text">Connecting...</span>
+            </div>
+        </header>
+
+        <div class="chat-container">
+            <div id="chat-messages" class="chat-messages">
+                <!-- Messages will be appended here -->
+            </div>
+
+            <div id="typing-indicator" class="typing-indicator" style="display: none;">
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+            </div>
+        </div>
+
+        <div class="input-container">
+            <textarea
+                id="message-input"
+                placeholder="Type your message here..."
+                rows="1"
+                autocomplete="off"
+            ></textarea>
+            <button id="send-button" disabled>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+            </button>
+        </div>
+
+        <div class="examples">
+            <p class="examples-title">Try asking:</p>
+            <div class="example-buttons">
+                <button class="example-btn" data-message="What is the expense policy for meals?">What is the expense policy for meals?</button>
+                <button class="example-btn" data-message="How do I submit an expense report?">How do I submit an expense report?</button>
+                <button class="example-btn" data-message="What receipts do I need to keep?">What receipts do I need to keep?</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

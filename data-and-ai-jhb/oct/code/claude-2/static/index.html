@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Report Assistant</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="chat-container">
+            <div class="chat-header">
+                <h1>Expense Report Assistant</h1>
+                <p class="subtitle">Ask about expense policies or submit expense reports</p>
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        <p>Hello! I'm your Expense Report Assistant. I can help you with:</p>
+                        <ul>
+                            <li>Understanding expense policies</li>
+                            <li>Submitting expense reports</li>
+                            <li>Answering questions about allowable expenses</li>
+                        </ul>
+                        <p>How can I assist you today?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="typing-indicator" id="typingIndicator" style="display: none;">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="chat-input-container">
+                <div class="example-prompts" id="examplePrompts">
+                    <button class="example-prompt" data-prompt="What are the company's expense reimbursement policies?">
+                        What are the company's expense reimbursement policies?
+                    </button>
+                    <button class="example-prompt" data-prompt="How do I submit a travel expense report?">
+                        How do I submit a travel expense report?
+                    </button>
+                    <button class="example-prompt" data-prompt="What expenses are eligible for reimbursement?">
+                        What expenses are eligible for reimbursement?
+                    </button>
+                    <button class="example-prompt" data-prompt="What is the per diem rate for meals?">
+                        What is the per diem rate for meals?
+                    </button>
+                </div>
+                <div class="input-wrapper">
+                    <textarea
+                        id="messageInput"
+                        placeholder="Type your message here..."
+                        rows="1"
+                    ></textarea>
+                    <button id="sendButton">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
