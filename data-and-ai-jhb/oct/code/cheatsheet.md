@@ -14,10 +14,13 @@ Breakfast $20
 
 
 
-can you think hard and plan to create a simple web application that is a chatbot calling into an Azure AI Foundry agent. The agent is named <agent-name>, the id is
-<agent-id>, and the endpoint is <endpoint-url>. The agent is an expense report agent, where the user can ask questions about the Expense policies as well as submitting expense report. I would
-like to use Python and FastAPI. Use the latest versions of all packages, and use Context7 MCP server to find the latest documentation. Keep the logic as simple as possible. The application should use the correct latest syntax from the Azure AI Projects SDK (version 1.0.0). All methods should follow the pattern of
-  project_client.agents.<resource>.<action>() which is the current standard for the library.Agent ID and endpoint should be read from environment variables. Requests and responses should be HTML, NOT web sockets.
+
+
+
+
+
+
+Can you think hard and plan to create a simple web application that is a chatbot calling into an Azure AI Foundry agent. The agent has an id and an endpoint url, which need to be loaded from an .env file. The agent is an expense report agent, where the user can ask questions about the Expense policies as well as submitting expense report. I would like to use Python and FastAPI. Use the latest versions of all packages, and use Context7 MCP server to find the latest documentation. Keep the logic as simple as possible. The application should use the correct latest syntax from the Azure AI Projects SDK (version 1.0.0). All methods should follow the pattern of project_client.agents.<resource>.<action>() which is the current standard for the library.Agent ID and endpoint should be read from environment variables. Requests and responses should be HTML, NOT web sockets.
 
 
 
