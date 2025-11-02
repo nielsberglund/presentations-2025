@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #ffffff;
+  font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header {
+  background: #0078D4; padding: 22pt; margin: 0;
+}
+h1 {
+  color: #ffffff; font-size: 44pt; margin: 0;
+  font-weight: bold;
+}
+.content {
+  margin: 20pt 40pt 60pt 40pt;
+}
+.components {
+  display: flex; gap: 18pt; margin: 15pt 0;
+}
+.component {
+  flex: 1;
+  background: #F3F2F1;
+  padding: 15pt;
+  border-radius: 8pt;
+  border-left: 8pt solid #0078D4;
+}
+h2 {
+  color: #0078D4; font-size: 18pt; margin: 0 0 10pt 0;
+  font-weight: bold;
+}
+p {
+  color: #000000; font-size: 16pt; margin: 0;
+  line-height: 1.2;
+}
+.highlight {
+  background: #0078D4; color: #ffffff;
+  padding: 12pt; border-radius: 8pt;
+  margin-top: 15pt; text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>MCP Architecture Components</h1>
+</div>
+<div class="content">
+  <div class="components">
+    <div class="component">
+      <h2>1. MCP Host/Client</h2>
+      <p>Your .NET application</p>
+    </div>
+    <div class="component">
+      <h2>2. MCP Server</h2>
+      <p>MSSQL MCP Server (already exists!)</p>
+    </div>
+    <div class="component">
+      <h2>3. Transport Layer</h2>
+      <p>stdio, HTTP, SSE</p>
+    </div>
+  </div>
+  <div class="highlight">
+    <p>We're building #1, using #2 that already exists</p>
+  </div>
+</div>
+</body>
+</html>

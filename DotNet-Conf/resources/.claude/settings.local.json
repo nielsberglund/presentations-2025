@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm init -y)",
+      "Bash(npm install:*)",
+      "Bash(node create-presentation.js:*)",
+      "Bash(npx playwright:*)",
+      "Bash(timeout 90 node:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
