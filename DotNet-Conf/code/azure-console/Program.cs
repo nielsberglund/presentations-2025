@@ -5,16 +5,27 @@ using Azure.Identity;
 using Microsoft.Extensions.AI;
 using ModelContextProtocol.Client;
 
-
 class Program
 {
     static async Task Main(string[] args)
     {
         Console.WriteLine("=== MCP Client with Azure OpenAI (using SDK) ===\n");
 
-        var endpoint = "https://nielsb-test-1-resource.services.ai.azure.com/";
-        var apiKey = "9Jhi3VBnWNrqvGhApLybbGeN0tRvuBXyGcLA4PjLbrvFYp7BCCYhJQQJ99BJACHYHv6XJ3w3AAAAACOGgiK7";
-        var deploymentName = "gpt-4o-2";
+        DotNetEnv.Env.TraversePath().Load();
+
+        var endpoint = Environment.GetEnvironmentVariable("AZURE_API_ENDPOINT");
+        var apiKey = Environment.GetEnvironmentVariable("AZURE_API_KEY");
+
+        Console.WriteLine($"Endpoint: {endpoint}");
+        Console.WriteLine($"API Key: {apiKey}");
+
+        var deploymentName = "gpt-5.1-chat";
+
+        /*
+          grok-4-fast-reasoning
+          gpt-5.1-codex-mini
+          gpt-5.1-chat
+        */
 
         if (string.IsNullOrEmpty(endpoint) || string.IsNullOrEmpty(apiKey))
         {

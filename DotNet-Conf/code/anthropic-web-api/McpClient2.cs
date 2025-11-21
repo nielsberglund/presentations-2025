@@ -17,7 +17,7 @@ public class McpClient2 : IAsyncDisposable
     private readonly List<Message> _messages = new();
     private bool _isInitialized = false;
 
-    private const string ApiKey = "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";
+    private string? ApiKey;
     private const string ModelId = "claude-sonnet-4-5-20250929";
     private const string SystemPrompt = "You are a helpful AI assistant with access to a SQL Server database. " +
                 "Use the available tools to help users query and understand their data. " +
@@ -27,6 +27,10 @@ public class McpClient2 : IAsyncDisposable
     public async Task InitializeAsync()
     {
         if (_isInitialized) return;
+
+        DotNetEnv.Env.TraversePath().Load();
+
+        ApiKey = Environment.GetEnvironmentVariable("ANTHROPIC_API_KEY");
 
         // Get path to the mcp.json configuration file
         string mcpConfigPath;

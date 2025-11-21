@@ -73,7 +73,7 @@ node_modules/
 *.log
 
 # Environment variables
-.env
+**/.env
 
 # .NET user secrets
 secrets.json

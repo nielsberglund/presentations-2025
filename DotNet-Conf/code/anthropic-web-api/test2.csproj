@@ -26,6 +26,7 @@
     <PackageReference Include="Microsoft.Extensions.AI" Version="*-*" />
     <PackageReference Include="Microsoft.Extensions.AI.OpenAI" Version="*-*" />
     <PackageReference Include="Azure.Identity" Version="1.*" />
+    <PackageReference Include="DotNetEnv" Version="3.1.1" />
 
     <!-- MCP Client -->
     <PackageReference Include="ModelContextProtocol" Version="*-*" />

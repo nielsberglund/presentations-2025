@@ -5,6 +5,7 @@ using Azure.AI.OpenAI;
 using Azure.Identity;
 using Microsoft.Extensions.AI;
 using ModelContextProtocol.Client;
+using DotNetEnv;
 
 public class McpChatService : IAsyncDisposable
 {
@@ -14,9 +15,10 @@ public class McpChatService : IAsyncDisposable
     private readonly List<ChatMessage> _messages = new();
     private bool _isInitialized = false;
 
-    // Hardcoded configuration
-    private const string Endpoint = "https://nielsb-test-1-resource.services.ai.azure.com/";
-    private const string ApiKey = "9Jhi3VBnWNrqvGhApLybbGeN0tRvuBXyGcLA4PjLbrvFYp7BCCYhJQQJ99BJACHYHv6XJ3w3AAAAACOGgiK7";
+    string? endpoint;
+    string? apiKey;
+   
+    
     //private const string DeploymentName = "gpt-4o-2"; //gpt-5.1-chat
     private const string DeploymentName = "gpt-5.1-chat";
     /*
@@ -38,7 +40,12 @@ public class McpChatService : IAsyncDisposable
     {
         if (_isInitialized) return;
 
-        if (string.IsNullOrEmpty(Endpoint) || string.IsNullOrEmpty(ApiKey))
+        DotNetEnv.Env.TraversePath().Load();
+
+        endpoint = Environment.GetEnvironmentVariable("AZURE_API_ENDPOINT");
+        apiKey = Environment.GetEnvironmentVariable("AZURE_API_KEY");
+
+        if (string.IsNullOrEmpty(endpoint) || string.IsNullOrEmpty(apiKey))
         {
             throw new InvalidOperationException("Azure OpenAI configuration is missing.");
         }
@@ -63,8 +70,8 @@ public class McpChatService : IAsyncDisposable
 
         // Create Azure OpenAI client
         var azureClient = new AzureOpenAIClient(
-            new Uri(Endpoint),
-            new Azure.AzureKeyCredential(ApiKey)
+            new Uri(endpoint),
+            new Azure.AzureKeyCredential(apiKey)
         );
 
         _chatClient = new ChatClientBuilder(
