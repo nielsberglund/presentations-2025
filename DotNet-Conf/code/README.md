@@ -37,6 +37,7 @@ Arguments:
 <path to index.js>
 /Users/niels.berglund/repos/niels-pvt/SQL-AI-samples/MssqlMcp/Node/dist/index.js
 /Users/niels.berglund/repos/niels-pvt/sql-mcp-test-2/code/MCPServer/dist/index.js
+/Users/nielsb/repos/presentations/presentations-2025/MssqlMcp/Node/dist/index.js
 
 Environment variables:
 
