@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__MicrosoftDocs__microsoft_docs_search",
+      "mcp__MicrosoftDocs__microsoft_code_sample_search"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
