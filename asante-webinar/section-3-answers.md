@@ -1,6 +1,6 @@
 Q: Many organisations struggle not with data collection, but with data quality. What role does data engineering play in fixing this?
 
-A: In most organisations, the problem isn’t collecting data, it’s that bad data has been normalised—costing on average **$12.9M a year per company**, wasting about **21% of media spend**, and forcing data teams to spend **60% of their time just cleaning up mess** instead of creating value. 
+A: This is exactly the right question—and it's where so many AI and personalization initiatives fail. ßIn most organisations, the problem isn’t collecting data, it’s that bad data has been normalised—costing on average **$12.9M a year per company**, wasting about **21% of media spend**, and forcing data teams to spend **60% of their time just cleaning up mess** instead of creating value. 
 
 Data engineering fixes this by baking quality into the pipeline: early validation (the 1:10:100 rule), automated cleansing and standardisation, real-time monitoring and anomaly detection, self-healing pipelines, and increasingly AI-powered data quality tools that spot and correct issues at scale. 
 

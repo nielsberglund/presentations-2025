@@ -6,7 +6,7 @@ Under the hood, real-time CDPs and agentic AI will become standard (with over **
 ---
 Q: If a company wants to start enhancing their customer experience using technology today, what is the single smartest first step?
 
-A: The single smartest first step *isn’t* buying a new AI tool or CDP—it’s getting to the **truth** of your customer experience: audit where all your customer data lives, break down silos, and map the *real* end-to-end journey from the customer’s point of view, not the PowerPoint fantasy. 
+A: This is the question that separates companies that succeed with MarTech from those that waste millions on shiny tools that never deliver. The single smartest first step *isn’t* buying a new AI tool or CDP—it’s getting to the **truth** of your customer experience: audit where all your customer data lives, break down silos, and map the *real* end-to-end journey from the customer’s point of view, not the PowerPoint fantasy. 
 
 That combination of unified data and honest journey mapping becomes your north star, surfacing the biggest friction points, aligning teams (over 80% of practitioners say it does), and, as in Bose’s case, unlocking gains like **20% higher online conversions** and **15% fewer support calls** *before* you buy anything. Only after 6–8 weeks of this groundwork should you choose technology—so every rand you spend is tied to a specific, proven problem rather than a shiny AI gamble. 
 
