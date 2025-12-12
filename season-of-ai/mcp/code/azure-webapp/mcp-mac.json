@@ -1,0 +1,18 @@
+{
+  "servers": {
+    "mssql-mcp": {
+      "type": "stdio",
+      "command": "node",
+      "args": [ "/Users/nielsb/repos/presentations/presentations-2025/MssqlMcp/Node/dist/index.js" ],
+      "env": {
+        "SERVER_NAME": "127.0.0.1",
+        "DATABASE_NAME": "MCPTestDB",
+        "READONLY": "false",
+        "SQL_USERNAME": "sa",
+        "SQL_PASSWORD": "Password1!",
+        "TRUST_SERVER_CERTIFICATE": "true"
+      }
+    }
+  },
+  "inputs": []
+}
