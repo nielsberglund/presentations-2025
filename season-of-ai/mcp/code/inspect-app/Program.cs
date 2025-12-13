@@ -20,6 +20,17 @@ class Program
   static async Task Main(string[] args)
   {
     Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+    bool isDebug = false;
+    
+    // read command line args
+    var arguments = ParseArguments(args);
+
+    if (arguments.ContainsKey("--debug"))
+    {
+      isDebug = true;
+    }
+
     // In your Program.cs or startup
     ProtocolVisualizer.LogPhase("STARTING APPLICATION", ConsoleColor.Yellow);
 
@@ -65,6 +76,13 @@ class Program
     //         Name = "MSSQL MCP Server"
     //       })
     //     );
+
+    if(isDebug)
+    {
+      Console.WriteLine("DEBUG MODE: About to connect to interceptor. Click any key to continue ...");
+      Console.ReadLine();
+    }
+
     mcpClient = await McpClient.CreateAsync(
       new StdioClientTransport(new()
       {
@@ -73,6 +91,12 @@ class Program
         Name = "MCP Interceptor"
       })
     );
+
+    if(isDebug)
+    {
+      Console.WriteLine("DEBUG MODE: Connected to interceptor. Click any key to continue  ...");
+      Console.ReadLine();
+    }
 
     ProtocolVisualizer.LogPhase("PHASE 2: DISCOVERING TOOLS", ConsoleColor.Cyan);
 
@@ -83,6 +107,12 @@ class Program
     foreach (var tool in tools)
     {
       Console.WriteLine($"  - {tool.Name}: {tool.Description}");
+    }
+
+    if(isDebug)
+    {
+      Console.WriteLine("DEBUG MODE: Listed tools. Click any key to continue  ...");
+      Console.ReadLine();
     }
 
     ProtocolVisualizer.LogPhase("PHASE 3: CONFIGURING AZURE AI", ConsoleColor.Magenta);
@@ -185,6 +215,30 @@ class Program
         }
       }
    
+  }
+
+  static Dictionary<string, string> ParseArguments(string[] args)
+  {
+    var arguments = new Dictionary<string, string>();
+
+    foreach (var arg in args)
+    {
+      // Split the argument by '=' to handle key/value pairs
+      string[] parts = arg.Split('=');
+
+      // Check if the argument is in the format "key=value"
+      if (parts.Length == 2)
+      {
+        arguments[parts[0]] = parts[1];
+      }
+      // If not, assume it's just a named argument without a value
+      else
+      {
+        arguments[arg] = null;
+      }
+    }
+
+    return arguments;
   }
 }
 
