@@ -51,6 +51,8 @@ W:\\OneDrive\\testcode\\mcptests\\SQL-AI-samples\\MssqlMcp\\Node\\dist\\index.js
 
 npx @modelcontextprotocol/inspector node W:\\OneDrive\\testcode\\mcptests\\SQL-AI-samples\\MssqlMcp\\Node\\dist\\index.js -e SERVER_NAME=127.0.0.1 -e DATABASE_NAME=MCPTestDB -e READONLY=false SQL_USERNAME=sa -e SQL_PASSWORD=Password1! -e TRUST_SERVER_CERTIFICATE=true
 
+npx @modelcontextprotocol/inspector node /Users/nielsb/repos/presentations/presentations-2025/MssqlMcp/Node/dist/index.js -e SERVER_NAME=127.0.0.1 -e DATABASE_NAME=MCPTestDB -e READONLY=false -e SQL_USERNAME=sa -e SQL_PASSWORD=Password1! -e TRUST_SERVER_CERTIFICATE=true
+
 
 "SERVER_NAME": "127.0.0.1",
         "DATABASE_NAME": "MCPTestDB",

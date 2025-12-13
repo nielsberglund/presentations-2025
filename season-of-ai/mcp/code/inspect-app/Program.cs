@@ -69,7 +69,7 @@ class Program
       new StdioClientTransport(new()
       {
         Command = "node",
-        Arguments = ["W:\\OneDrive\\testcode\\mcptests\\SQL-AI-samples\\MssqlMcp\\Node\\dist\\interceptor-win.cjs"],
+        Arguments = ["/Users/nielsb/repos/presentations/presentations-2025/MssqlMcp/Node/dist/interceptor-mac.cjs"],
         Name = "MCP Interceptor"
       })
     );

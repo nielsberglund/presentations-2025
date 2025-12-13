@@ -14,14 +14,14 @@ GO
 USE MCPTestDB;
 GO
 
-CREATE TABLE tb_Employee (
+CREATE TABLE Employees (
     EmployeeID INT PRIMARY KEY,
     FirstName NVARCHAR(50),
     LastName NVARCHAR(50),
     HireDate DATE
 );
 
-SELECT * FROM tb_Employee;
+SELECT * FROM Employees;
 
 SELECT * FROM sys.tables;
 

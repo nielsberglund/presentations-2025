@@ -2,6 +2,8 @@
 **/bin/
 **/obj/
 
+**/data/sqlserver
+
 # Rider Specific
 .idea/
 *.sln.iml

@@ -1,6 +1,12 @@
+USE MCPTestDB;
+GO
+
 SELECT * FROM sys.tables;
 
-SELECT * FROM dbo.[dbo.Rooms];
+-- DROP TABLE IF EXISTS dbo.tb_Employee
+
+
+SELECT * FROM Rooms;
 
 SELECT * FROM Speakers
 
@@ -8,4 +14,5 @@ SELECT * FROM Sessions;
 
 SELECT * FROM Attendees;
 
-SELECT * FROM Rooms
+SELECT * FROM Registrations;
+
